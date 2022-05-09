@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="styles.css" rel="stylesheet">
+</head>
+<body>
+     <div>
+        <h1>Simple Form</h1>
+          <form action="activity2(1).html" method="POST" onsubmit="return handleSubmit()">
+       <table>
+           <tbody>
+        <tr>
+            <td><label for="firstname">First name</label></td>
+            <td><input type="text" name = "firstName" id="firstName" autocomplete="off"></td>
+            <td><span id='fn'></span></td>
+        </tr>
+        <tr>
+           <td><label for="lastname">Last name</label></td>
+            <td><input type="text" name="lastName" id="lastName" autocomplete="off"></td>
+            <td><span id='ln'></span></td>
+        </tr>
+        <tr>
+            <td><label for="pwd">Password</label></td>
+            <td><input type="password" name="pwd" id="pwd"></td>
+            <td><span id='pss'></span></td>
+        </tr>
+        <tr>
+            <td><label for="cpwd">Confirm Password</label></td>
+            <td><input type="password" name="cpwd" id="cpwrd"></td>
+            <td><span id="Cpwd"></span></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+         </tbody>
+         </table>
+        </form>
+    </div>  
+        <script type="text/javascript">
+            function handleSubmit(){
+                let input1=document.getElementById('firstName').value;
+                let input2=document.getElementById('lastName').value;
+                let input3=document.getElementById('Password').value;
+                let input4=document.getElementById('Cpassword').value;
+
+                if(input1.length<=2){
+                    var ele = document.getElementById('fn');
+                    ele1.innerHTML=" Enter at least 2 char";
+                    return false;
+                }
+                if(input2.length<=2){
+                    var ele = document.getElementById('ln');
+                    ele2.innerHTML="Enter at least 2 char";
+                    return false;
+                }
+                if(input3.length<=2){
+                    var ele = document.getElementById('ps');
+                    ele3.innerHTML=" Enter your password ";
+                    return false;
+                }
+                if(input4.length<=2){
+                    var ele = document.getElementById('cps');
+                    ele4.innerHTML= "pls confirm your password";
+                    return false;
+                }
+                if(input3 != input4){
+                    alert("Re-enter your password");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+</body>
+</html>

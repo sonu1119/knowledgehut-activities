@@ -1,0 +1,21 @@
+header{
+    background-color: lightcoral;
+    color : whitesmoke;
+    padding : 2px;
+    text-align: center;
+    border-radius: 25px;
+}
+.left{
+    background-color:lightslategray;
+    width: 250px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 25px;
+}
+.left > div{
+    display: inline-block;
+}
+section{
+    background-color: rgb(146, 140, 148);
+    padding: 2px;
+}

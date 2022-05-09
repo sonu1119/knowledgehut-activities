@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Example on Canvas</h1>
+    <canvas id='a1' width="600" height="600" style='border=solid 2px'></canvas>
+    <script type="text/javascript">
+        let a = document.getElementById('a1');
+        let ctx = a.getContext('2d');
+        for (var i =0; i<8; i++) {
+            for (var j=0; j<8; j++) {
+                ctx.beginPath();
+                ctx.fillStyle =['black', 'white'] [(i+j)%2];
+                ctx.fillRect(i*100, j*100, 100, 100);
+                ctx.closePath();
+            }
+        }
+    </script>
+</body>
+</html>
