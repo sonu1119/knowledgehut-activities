@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Generator example</h2>
+    <div id='main'>Next value: </div>
+    <button onclick="fetch()">Fetch</button>
+
+    <script type="text/javascript">
+
+        function *generatorDemo(){
+            console.log('First line');
+            yield 8; //assume 8 is fetched from database
+
+            console.log('Second line');
+            yield "Hello Everyone";
+
+            console.log('Third line');
+            yield 25;
+        }
+        let g = generatorDemo();
+        function fetch() {
+            let result = g.next();
+            let ele = document.getElementById('main');
+            ele.innerHTML = 'Next value:' +result.value;
+        }
+    </script>
+</body>
+</html>
