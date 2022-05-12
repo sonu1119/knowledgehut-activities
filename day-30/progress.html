@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Demo on some HTML features</h2>
+    <progress id="p1" max="100" value="0"></progress>
+    <span id="s1"></span><br/>
+    <button onclick="startDownloading()">Download</button>
+    <script type="text/javascript">
+        function startDownloading() {
+            let progress = document.getElementById('p1');
+            let span = document.getElementById('s1');
+            let maxValue = progress.max;
+            let counter = 0;
+            let interval = 0;
+            interval = setInterval(() => {
+                progress.value = ++counter;
+                span.innerHTML = `${counter} %`
+                if(counter == maxValue) {
+                    clearInterval(interval);
+                }
+            }, 100);
+        }
+
+    </script>
+</body>
+</html>

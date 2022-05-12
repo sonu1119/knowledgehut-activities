@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Demo on some HTML features</h2>
+   0 <input type="range" id="r1" min="0" max="5" value="0" oninput="slide()">
+    <span id='s1'>1</span>
+    <script type="text/javascript">
+          function slide() {
+              let ele =  document.getElementById('r1');
+              let span =  document.getElementById('s1');
+              span.innerHTML = ele.value;
+          }
+    </script>
+</body>
+</html>
